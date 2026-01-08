@@ -108,12 +108,10 @@ const Timer = () => {
   const handleView = (e) => {
     setView(e.target.value);
   };
-  const onSelect = (val) => {
-    let date = val.format('YYYY-MM-DD');
-    setValue([...value, date]);
-  };
+
   return (
     <div style={view === 'Timer' ? style : calendarStyle}>
+      
       {/* <div style={{ float: 'right' }}>
         <Radio.Group
           defaultValue='Timer'
@@ -126,6 +124,7 @@ const Timer = () => {
       </div> */}
 
       <br />
+       <h3>🚗🚗🚗🚗</h3>
       <p />
       {view === 'Timer' ? (
         <>
@@ -223,8 +222,10 @@ const Timer = () => {
             </Col>
           </Row>
         </>
-      ) : (
-        <Calendar dateCellRender={dateCellRender} onSelect={onSelect} />
+      ) : (<>
+         
+        <Calendar dateCellRender={dateCellRender}  />
+      </>
       )}
     </div>
   );
